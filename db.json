@@ -1,0 +1,35 @@
+{
+  "student": [
+    {
+      "id": 3,
+      "name": "roshan",
+      "class": "10",
+      "address": "itahari"
+    },
+    {
+      "id": 6,
+      "name": "msdjfksfdkl",
+      "class": "5",
+      "address": "dfjlsafksadjf"
+    },
+    {
+      "id": 7,
+      "name": "Manish",
+      "class": "15",
+      "address": "Biratnagar"
+    },
+    {
+      "id": 9,
+      "name": "Rebina Karki",
+      "class": "15",
+      "address": "Damak"
+    },
+    {
+      "id": 10,
+      "name": "sfds",
+      "class": 1,
+      "address": ""
+    }
+  ],
+  "work": []
+}

@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test';
+
+
+  // showMsg = true;
+
+
+
+  title = 'MyProjects';
+
+  readme(){
+    console.log('button clicked');
+  }
+
 }
