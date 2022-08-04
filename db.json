@@ -1,34 +1,17 @@
 {
   "student": [
     {
-      "id": 3,
-      "name": "roshan",
-      "class": "10",
-      "address": "itahari"
-    },
-    {
-      "id": 6,
-      "name": "msdjfksfdkl",
-      "class": "5",
-      "address": "dfjlsafksadjf"
-    },
-    {
-      "id": 7,
-      "name": "Manish",
-      "class": "15",
-      "address": "Biratnagar"
-    },
-    {
-      "id": 9,
-      "name": "Rebina Karki",
-      "class": "15",
-      "address": "Damak"
-    },
-    {
-      "id": 10,
-      "name": "sfds",
-      "class": 1,
-      "address": ""
+      "id": 1,
+      "name": "Roshan",
+      "class": "8",
+      "address": "KTM",
+      "result": [
+        {
+          "id": 1,
+          "subject": "Maths",
+          "marksObtained": 45
+        }
+      ]
     }
   ],
   "work": []

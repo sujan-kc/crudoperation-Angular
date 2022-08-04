@@ -1,4 +1,8 @@
 <div class="container">
+    <div class=" d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary" (click)="postData()">{{this.id?'Update':'Save'}}</button>
+    </div>
+
     <form [formGroup]="form">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
@@ -14,6 +18,43 @@
             <label for="exampleInputPassword1" class="form-label">Address</label>
             <input type="text" formControlName="address" class="form-control" id="exampleInputPassword1">
         </div>
-        <button type="submit" class="btn btn-primary" (click)="postData()">{{this.id?'Update':'Submit'}}</button>
+
+
+        <!-- formArray -->
+        <div class="formArray">
+
+
+            <div class=" d-flex justify-content-between">
+                <h3>
+                    Student Marks Details
+                </h3>
+                <button class="button btn btn-primary" (click)="addFormArrGroup()">Add Details</button>
+            </div>
+
+            <table class="table" formArrayName="result">
+                <thead>
+                    <tr>
+                        <th scope="col">SN</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Marks Obtained</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr [formGroupName]="i" *ngFor="let abcd of studentDetails.controls;index as i">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            <input formControlName="subject" class="form-control" type="text">
+                        </td>
+
+                        <td>
+                            <input formControlName="marksObtained" class="form-control" type="text">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </form>
 </div>
