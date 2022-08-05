@@ -23,7 +23,7 @@ export class FormComponent implements OnInit {
   }
   delete(id:number){
     this.fs.deletStudent(id).subscribe(()=>{
-      alert("Delete")
+      alert("Are you sure want to Delete!!!")
       this.getData()
     })
   }

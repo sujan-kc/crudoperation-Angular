@@ -1,26 +1,37 @@
 <div class="container">
-    <button class="btn btn-primary" routerLink="addform">Add</button>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">SN</th>
-                <th scope="col">Name</th>
-                <th scope="col">Class</th>
-                <th scope="col">Address</th>
-                <th scope="col">Delete</th>
-                <th scope="col">Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of allstudentdata;index as i">
-                <th scope="row">{{i + 1}}</th>
-                <td>{{item.name}}</td>
-                <td>{{item.class}}</td>
-                <td>{{item.address}}</td>
-                <td><button class="btn btn-danger" (click)="delete(item.id)">Delete</button></td>
-                <td><button class="btn btn-info" [routerLink]="['edit',item.id]">Edit</button></td>
-            </tr>
-
-        </tbody>
-    </table>
+  <button class="btn btn-primary" routerLink="addform">Add</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SN</th>
+        <th scope="col">Name</th>
+        <th scope="col">Class</th>
+        <th scope="col">Address</th>
+        <!-- <th scope="col">Subject</th>
+        <th scope="col">Marks Obtained</th> -->
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allstudentdata; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.class }}</td>
+        <td>{{ item.address }}</td>
+        <!-- <td>{{ item.result[i]?.subject }}</td>
+        <td>{{ item.result[i]?.marksObtained }}</td> -->
+        <td>
+          <button class="btn btn-danger" (click)="delete(item.id)">
+            Delete
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-info" [routerLink]="['edit', item.id]">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

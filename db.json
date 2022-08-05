@@ -4,12 +4,30 @@
       "id": 1,
       "name": "Roshan",
       "class": "8",
-      "address": "KTM",
+      "address": "Pokhara",
       "result": [
         {
-          "id": 1,
-          "subject": "Maths",
+          "id": 0,
+          "subject": "maths",
           "marksObtained": 45
+        },
+        {
+          "id": 0,
+          "subject": "sciencw",
+          "marksObtained": "45"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ranbir",
+      "class": "5",
+      "address": "brt",
+      "result": [
+        {
+          "id": 0,
+          "subject": "maths",
+          "marksObtained": "45"
         }
       ]
     }
