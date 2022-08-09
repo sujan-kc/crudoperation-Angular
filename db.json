@@ -1,35 +1,17 @@
 {
   "student": [
     {
-      "id": 1,
-      "name": "Roshan",
-      "class": "8",
+      "id": 2,
+      "name": "Manish Katwal ",
       "address": "Pokhara",
       "result": [
         {
           "id": 0,
-          "subject": "maths",
-          "marksObtained": 45
-        },
-        {
-          "id": 0,
-          "subject": "sciencw",
-          "marksObtained": "45"
+          "subject": "maths ",
+          "marksObtained": "95"
         }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "ranbir",
-      "class": "5",
-      "address": "brt",
-      "result": [
-        {
-          "id": 0,
-          "subject": "maths",
-          "marksObtained": "45"
-        }
-      ]
+      ],
+      "totalMarks":0
     }
   ],
   "work": []

@@ -23,15 +23,16 @@ export class AddformComponent implements OnInit {
     private fs: FormService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     if (this.id) {
       // edit part
       this.fs.getDataById(this.id).subscribe((res) => {
-        console.log(res);
+        console.log("my log", res);
         this.createForm(res);
+        this.calculateTotalMarks();
       });
     }
     this.createForm();
@@ -43,11 +44,11 @@ export class AddformComponent implements OnInit {
       // name: new FormControl(item.name),
       // class: new FormControl(item.class),
       // address: new FormControl(item.address)
+
       //next method for form control
       id: [item.id],
-      name: [item.name ? item.name : ''],
-      class: [item.class],
-      address: [item.address],
+      name: [item.name ? item.name : '', Validators.required],
+      address: [item.address, Validators.required],
       result: this.fb.array(
         (() => {
           // if not of item.result => return  []
@@ -62,6 +63,7 @@ export class AddformComponent implements OnInit {
           }
         })()
       ),
+      totalMarks: [item.totalMarks ? item.totalMarks : 0]
     });
   }
 
@@ -122,7 +124,7 @@ export class AddformComponent implements OnInit {
   //   console.log(this.studentDetails.controls[0].get('subject')?.value)
   // }
   postData() {
-    //data aayo vane yo lline of code
+    // data aayo vane yo lline of code
     if (this.id) {
       this.fs.updateData(this.form.getRawValue(), this.id).subscribe(() => {
         alert('Updated Successfully');
@@ -130,10 +132,25 @@ export class AddformComponent implements OnInit {
       });
     } else {
       // data aayan vane execute this liine of code
-      this.fs.postStudentData(this.form.getRawValue).subscribe(() => {
-        alert('create succesfully!!');
+      this.fs.postStudentData(this.form.getRawValue()).subscribe(() => {
+        alert('Created Successfully');
         this.router.navigateByUrl('');
       });
     }
+  }
+
+  // setValue,value
+  calculateTotalMarks() {
+
+    let sums = 0;
+    this.studentDetails.controls.forEach(element => {
+      // console.log(typeof element.get("marksObtained")?.value)
+      sums = sums + (+element.get("marksObtained")?.value);
+      console.log("sums here", sums);
+
+
+    });
+    this.form.get("totalMarks")?.setValue(sums);
+
   }
 }

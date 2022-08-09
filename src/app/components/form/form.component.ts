@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
   getData(){   
     this.fs.getStudentData().subscribe(res=>{
       console.log(res)
-      this.allstudentdata=res
+      this.allstudentdata=res;
 
     })
   }
