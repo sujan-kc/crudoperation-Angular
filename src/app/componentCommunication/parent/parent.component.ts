@@ -12,6 +12,7 @@ export class ParentComponent implements OnInit {
   // siblings!: Array<string>;
   form!: FormGroup
   namevar = ""
+  test1 = ""
   constructor(private fb: FormBuilder) { }
 
 
@@ -33,7 +34,10 @@ export class ParentComponent implements OnInit {
     this.namevar = name.value
 
   }
-
+  recieverFromChild(e: string) {
+    console.log(e)
+    this.test1 = e
+  }
 
 
 }

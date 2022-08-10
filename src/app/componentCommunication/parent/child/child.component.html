@@ -1,9 +1,9 @@
-<div style="border: solid 1px black;">
+<!-- <div style="border: solid 1px black;"> 
     <p>child Component</p>
     <br>
 
     <p>Data from parent:{{namevar}}</p>
-    <!-- First Name: {{ fname }}
+    First Name: {{ fname }}
     <br>
     Last Name: {{ lname }}
     <br>
@@ -11,7 +11,12 @@
     <br>
     <span *ngFor="let sibling of siblings">
         {{ sibling }} <br>.
-    </span> -->
+    </span>
 </div>
 
-<!-- <p>child component</p> -->
+<p>child component</p> -->
+<div class="child mt-4" style="border: 2px solid red;">
+    <p>Child Component:{{childVar}}</p>
+    <input type="text" #input (input)="sendDatatoParent(input)">
+    <!-- <button (click)="sendDatatoParent()">Click</button> -->
+</div>

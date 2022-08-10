@@ -1,7 +1,9 @@
-<form [formGroup]="form" class="mb-5">
+<!-- <form [formGroup]="form" class="mb-5">
     <label>Name</label>
     <input #name (input)="trigger(name)" type="text" class="form-control" formControlName="name">
-</form>
+</form>-->
+<p>parent component:{{test1}}</p>
 
+<app-child [namevar]="namevar" (stringEvent)="recieverFromChild($event)"></app-child>
 
-<app-child [namevar]="namevar"></app-child>
+<!-- (event) event binding [ggdf] property binding -->
