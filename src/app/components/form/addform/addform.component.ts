@@ -141,14 +141,11 @@ export class AddformComponent implements OnInit {
 
   // setValue,value
   calculateTotalMarks() {
-
     let sums = 0;
     this.studentDetails.controls.forEach(element => {
       // console.log(typeof element.get("marksObtained")?.value)
       sums = sums + (+element.get("marksObtained")?.value);
       console.log("sums here", sums);
-
-
     });
     this.form.get("totalMarks")?.setValue(sums);
 

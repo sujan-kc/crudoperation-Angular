@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+    <label>Name</label>
+    <input #name (input)="trigger(name)" type="text" class="form-control" formControlName="name">
+</form>
+
+
+<app-child [namevar]="namevar"></app-child>
